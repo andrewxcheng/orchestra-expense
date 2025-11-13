@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "NYU Engage Expense Auto-Fill",
+  "version": "1.0.0",
+  "description": "Agentic AI expense submission tool that auto-fills NYU Engage expense forms from receipt PDFs",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "sidePanel"
+  ],
+  "host_permissions": [
+    "https://api.openai.com/*",
+    "https://unpkg.com/*",
+    "https://cdnjs.cloudflare.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://engage.nyu.edu/*",
+        "*://*.engage.nyu.edu/*"
+      ],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {},
+  "side_panel": {
+    "default_path": "popup.html"
+  },
+  "options_page": "options.html",
+  "web_accessible_resources": [
+    {
+      "resources": ["pdf.worker.min.js"],
+      "matches": []
+    }
+  ]
+}
+
