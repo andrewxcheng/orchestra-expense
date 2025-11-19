@@ -90,7 +90,7 @@ The extension will work without icons, but Chrome may show warnings.
    - The selected file name will be displayed
 
 4. **Auto-Fill Form**
-   - Click **"🚀 Auto-Fill Expense Form"**
+   - Click **"Auto-Fill Expense Form"**
    - The extension will:
      - Extract text from the PDF
      - Call OpenAI API to parse structured data

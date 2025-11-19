@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "NYU Engage Expense Auto-Fill",
+  "name": "Expense Management powered by IBM watsonx Orchestrate",
   "version": "1.0.0",
   "description": "Agentic AI expense submission tool that auto-fills NYU Engage expense forms from receipt PDFs",
   "permissions": [

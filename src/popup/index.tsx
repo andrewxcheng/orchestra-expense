@@ -175,7 +175,8 @@ const Popup: React.FC = () => {
   return (
     <div className="container">
       <div className="header">
-        <h1>🎯 NYU Expense Auto-Fill</h1>
+        <h1>Expense Management</h1>
+        <h2>Powered by IBM watsonx Orchestrate</h2>
         <button 
           className="gear-button"
           onClick={() => setShowSettings(!showSettings)}
@@ -290,7 +291,7 @@ const Popup: React.FC = () => {
             disabled={loading || !selectedFile}
           >
             {loading && <span className="loading"></span>}
-            {loading ? 'Processing...' : '🚀 Auto-Fill Expense Form'}
+            {loading ? 'Processing...' : 'Auto-Fill Expense Form'}
           </button>
         </div>
       )}
@@ -307,7 +308,7 @@ const Popup: React.FC = () => {
           <ul className="summary-list">
             {fillSummary.results.map((result, idx) => (
               <li key={idx}>
-                <strong>{result.fieldName}:</strong>
+                <strong>{result.fieldName}: </strong>
                 {result.filled ? (
                   <>
                     <span className={result.needsReview ? 'needs-review' : ''}>

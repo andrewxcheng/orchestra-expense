@@ -11,3 +11,4 @@ You can create simple icons using any image editor, or use online tools like:
 
 For a quick placeholder, you can create simple colored squares with text or use a generic expense/receipt icon.
 
+
